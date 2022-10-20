@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block body %}
+<h1>Registration</h1>
+<form action="/register" method="post">
+    <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
+    <input type="file" accept="image/*" name="image">
+    <input type="submit" value="Register">
+</form>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block body %}
+    <h1>Registrants</h1>
+{% for i in dic %}
+<style>img{height:300px;width:300px;}</style>
+
+<div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <img src = "{{url_for('static', filename=i)}}">
+        <!-- <img src="img_paris.jpg" alt="Paris" style="width:300px;height:300px"> -->
+      </div>
+      <div class="flip-box-back">
+        <h2>Paris</h2>
+        <p>{{dic[i]}}</p>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+{% endblock %}
+
